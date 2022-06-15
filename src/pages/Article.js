@@ -1,14 +1,17 @@
 
 import  React from  "react";
+import  {FaFileAudio} from  "react-icons/fa";
 import NavItem from "../components/Article/NavItem";
 import Subscribe from "../components/Article/Subscribe";
 import  Steps from  "../components/Article/Steps";
+import IntroVideo from "../components/Article/IntroVideo";
 
 
 function Article(){
     return(
 		<div>
 		     <div class="bg-gray-100 font-sans leading-normal tracking-normal">
+
 			    {/* NavItem ****************/}
 				<NavItem/>
 				
@@ -20,13 +23,23 @@ function Article(){
 					       <p class="text-base md:text-sm text-green-500 font-bold">&lt; <a href="#" class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">BACK TO BLOG</a></p>
 						    <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Welcome to Minimal Blog</h1>
 							<p class="text-sm md:text-base font-normal text-gray-600">Published 19 February 2019</p>
+							<div className="relative">
+							   <button type="button"  className="rounded p-1 hover:shadow-lg bg-green-100">   
+							      <FaFileAudio className="text-cyan-900 h-11 w-11 "/>
+								  </button>
+
+								  <div className=" absolute shadow-lg bg-gray-100">
+								     <p>écouter l'article en audio</p>
+								  </div>
+							</div>
 					   </div>
 
 					   {/*Post Content*/}
-					   {/*Lead Para*/}
 					   <p class="py-6">
 					      👋 Welcome fellow <a class="text-green-500 no-underline hover:underline" href="https://www.tailwindcss.com">Tailwind CSS</a> and miminal monochrome blog fan. This starter template provides a starting point to create your own minimal monochrome blog using Tailwind CSS and vanilla Javascript.
 					   </p>
+					   {/*INtroVideo pour mettre en vedette une video de presentio de l'article ************************/}
+					   <IntroVideo/>
 					   <p class="py-6">The basic blog page layout is available and all using the default Tailwind CSS classes (although there are a few hardcoded style tags). If you are going to use this in your project, you will want to convert the classes into components.</p>
 					    
 					   {/** Step ayant pour composant Step de joy ******************  */}

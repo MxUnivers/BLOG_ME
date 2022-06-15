@@ -19,15 +19,15 @@ const  steps = [
     {
         id:3 ,
         imageSrc:"https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        ,title:"Etape 4  :  cuisine" , 
+        ,title:"Etape 3  :  cuisine" , 
         text:"Cuisiner de devient tout un art quand dans la cuisine on a des chef venus de tout les pays pour apporter de bons monments a leur occupants , juste avec des cesseroles . comme on le dit la cuis ne ce n'est pas seulement une question de gout .",
         lien:"#"
     },
     {
         id:4 ,
         imageSrc:"https://images.pexels.com/photos/4965381/pexels-photo-4965381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        ,title:"Etape 5  :  l'eau de rivière" , 
-        text:"l'eau  de rivière une eau plus tôt propre pour la consommation ,  les toutriste de demèlent patout dans toute la planète pour trouvé une eau calme et paisilble dans la pour y passer de bon moment ",
+        ,title:"Etape 4  :  l'eau de rivière" , 
+        text:"l'eau  de rivière eoioeieeejklekpàozzklz une eau plus tôt propre pour la consommation ,  les toutriste de demèlent patout dans toute la planète pour trouvé une eau calme et paisilble dans la pour y passer de bon moment ",
         lien:"#"
         
     },
@@ -56,12 +56,12 @@ const  steps = [
             <div className="flex-col ">
                {
                    steps.map((step)=>
-                       <div>
-                           <img  src={step.imagSrc} className="h-full w-full " />
-                            <h3 className="text-black text-xl uppercase py-1 font-bold">{step.title}</h3>
+                       <div className="border-b mb-5">
+                       <h3 className="text-black text-xl uppercase py-1 font-bold">{step.title}</h3>
+                           <img  src={step.imageSrc} className="h-full w-full " />
                             <p className="py-3 px-1">{step.text}</p>
                             <p className="italic border-l-red-300 py-1 px-1">{step.italic}</p>
-                            <a href={step.lien} target={"_blank"}>aller vers le site de </a>
+                            <a href={step.lien} target={"_blank"} className="px-2 py-1 bg-gray-100 text-blue-600 hover:underline rounded-xl shadow-lg " >aller vers le site </a>
                     </div>
                    )
                }

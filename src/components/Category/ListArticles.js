@@ -4,7 +4,7 @@ import  {AiOutlineArrowRight} from  "react-icons/ai" ;
 
 const articles = [
     {
-        id:1 ,href:"#",description:"description de larticle en question ", 
+        id:1 ,href:"/article",description:"description de larticle en question ", 
         imageSrc:"https://images.pexels.com/photos/7915437/pexels-photo-7915437.jpeg?auto=compress&cs=tinysrgb&w=600" , date:"11/06/2022",title:"la meilleur de de toute",
     },
     {
@@ -64,7 +64,7 @@ function ListArticles(){
                 articles.map((article)=>
                     <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink ">
                         <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg hover:shadow-sm ">
-                           <a href="#" href="#" className="flex flex-wrap no-underline hover:no-underline">
+                           <a href={article.href} className="flex flex-wrap no-underline hover:no-underline">
                              
                                 <img src={article.imageSrc} className="overflow-hidden md:h-86  h-64 w-full transition-all duration-500 hover:scale-125 cursor-pointer  rounded-t pb-6"/>
                             

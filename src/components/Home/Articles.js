@@ -43,7 +43,7 @@ const Articles = ({Legend}) => {
          {Legend}          
         </div>
         <div className="flex items-right absolute right-0 top-1">
-            <button type="button" className="bg-gray-100 py-1 px-2 text-black underline hover:font-bold">voir plus ..</button>
+            <a href='/more-articles' type="button" className="bg-gray-100 py-1 px-2 text-black underline hover:font-bold">voir plus ..</a>
         </div>
     </div>
 

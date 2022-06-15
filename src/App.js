@@ -6,6 +6,7 @@ import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import Category from './pages/Category';
 import Article from "./pages/Article";
+import ListArticles from "./pages/ListArticles";
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
                <Route path="/about" element={<AboutUs/>}  /> 
                <Route path="/category" element={<Category/>}  /> 
                <Route path="/article" element={<Article/>}  /> 
-               <Route path='="*' element={<div>Page not found</div>} />            
+               <Route path="/more-articles" element={<ListArticles/>} />       
+               <Route path='="*' element={<div>Page not found</div>} />   
+                 
            </Routes>
        </BrowserRouter>        
     </div>
