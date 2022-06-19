@@ -21,7 +21,7 @@ const services =[
 
 const Footer = () => {
   return (
-    <footer className="container-fluid bg-gradient-to-t from-cyan-900 to-cyan-700 ">
+    <footer className="container-fluid bg-blue-900 dark:bg-blue-900 ">
         <div className="flex  md:flex-col sm:flex-row  lg:flex-row  grid md:grid-cols-6 sm:grid-cols-4 lg:grid-cols-4 gap-1 space-x-5">
             <div class="flex-col">
                 <h3><img src="logo_Aymar.png" className="w-10 h-10 bg-white rounded-2xl"/></h3>

@@ -16,7 +16,7 @@ function ArticleCart({title}) {
                             <HeaderArticle/>
                              {  /* ListArticles pour les différents article rénumérés */  }
                             <ListArticles />
-                            <OtherArticles title={"autres contenues"}/>
+                           
                         </div>
                     </div>
                 </div>

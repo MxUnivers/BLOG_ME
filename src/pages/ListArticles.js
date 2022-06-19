@@ -3,10 +3,11 @@ import {BsArrowRight} from  "react-icons/bs";
 import {AiOutlinePlusSquare , AiOutlineLike} from "react-icons/ai"
 import  Navbar from  "../components/Navbar";
 import  Footer from  "../components/Footer";
+import Social from "../components/Social";
 
 
 const  ListCart = [
-    {id  : 1  , title:"Infrormatique"  , imageSrc:""},
+    {id  : 1  , title:"Informatique"  , imageSrc:""},
     {id  : 2  , title:"santé"  , imageSrc:""},
     {id  : 3  , title:"Animation"  , imageSrc:""},
     {id  : 4  , title:"travail"  , imageSrc:""},
@@ -63,6 +64,8 @@ function ListArticles(){
         <div>
             <Navbar/>
               <div className="container-fluid bg-gray-100 my-3 mx-3">
+                  {/* Social  */}
+                  <Social/>
                   
                   <div class="w-full my-12">
                       <div class="max-w-6xl h-2xl mx-auto px-3 sm:px-2 lg:px-3 flex">
@@ -75,15 +78,15 @@ function ListArticles(){
 
                                   <div className="border-b py-2 my-1">
                                       <button type="button"  onClick={()=>{ window.history.back(); }}
-                                         className="rounded-2xl bg-cyan-300 text-cyan-900 py-1 px-3 ">retour</button>
+                                         className="rounded-l-2xl rounded-r-lg bg-blue-300 text-gray-100 py-1 px-3 ">retour</button>
                                    </div>
 
                                   <h1 class="md:text-3xl text-2xl font-bold text-gray-800">Mon blog</h1>
                                   <div className="flex w-full bordezr-b py-1  ">
                                       {/** champ de recherche  des différents articles ********* */}
                                        <div className="flex-col ">
-                                           <input readOnly placeholder="sujet-recherché" className="rounded-2xl bg-gray-100 text-black py-1 px-2 border-b "/>
-                                           <select className="border-b bg-gray-100 text-black font-bold  rounded bg-cyan-200 hover:bg-gray-300 ">
+                                           <input readOnly placeholder="sujet-recherché" className="rounded-md bg-gray-100 text-black py-1 px-2 border-b "/>
+                                           <select className="border-b bg-gray-100 text-black font-bold  rounded bg-gray-300 hover:bg-gray-400 ">
                                                {
                                                   ListCart.map((cart)=>
                                                       <option value={cart.id} className="text-base uppercase">{cart.title}</option>
@@ -92,9 +95,13 @@ function ListArticles(){
                                            </select>
                                        </div>
                                        <div>
-                                           <button type="submit" className="rounded-2xl py-1 px-3 bg-cyan-500 text-white hover:bg-cyan-600 active:bg-cyan-700 ">
+                                           <button type="submit" className="rounded-md py-1 px-3 bg-cyan-500 text-white hover:bg-cyan-600 active:bg-cyan-700 ">
                                                rechercher catégorie
                                            </button>
+                                       </div>
+                                       <div className="border my-1 mx-2 rounded-lg bg-gray-100 text-black  flex space-x-2">
+                                           <div className="">{articles.length }</div>
+                                           <div className="uppercase font-bold text-gray-500">résultats</div>
                                        </div>
                                   </div>
                                   <div className="border-t border-b flex flex-wrap justify-between pt-12 -mx-6 ">

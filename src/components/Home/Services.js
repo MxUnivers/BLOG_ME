@@ -1,6 +1,9 @@
 import  React from  "react";
 
+
+// VARIABLES DE SERVICES DIVERS
 const  services = [
+   
     {
         id: 1 , name :"Informatique" , imageSrc :"https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
     },
@@ -12,58 +15,39 @@ const  services = [
     }
     
 ]
-function Services({Title}){
+function Services(){
     return(
-        <div className="container-fluid bg-gray-100 pt-10 mt-2 mb-10 flex flex-col text-black border-b ">
-             <div className="flex flex-col items-center justify-center">
-                 <div className="flex items-center justify-center">
-                     <div className="flew py-2 text-black text-2xl border-b-2xl pb-2 mb-1 ">
-                         <h3 className="font-bold uppercase underline">{Title}</h3>
-                     </div>
-                 </div>
-
-
-
-                <div className="container px-4 mx-auto bg-white">
-                    <div className="flex flex-wrap m-4 ">
-                          
-                        <div className="relative xs:flex-col sm:flex lg:flex p-3 flex  justify-center overflow-x-auto container w-full">
-                             
-                             {
-                                 services.map((service)=>
-                                    <div className="relative rounded flex items-center h-[350px] w-[250px] hover:shadow-dashboard" >
-
-                                        <div className="rounded">
-                                             <img className="rounded h-[200px] w-[200px] rounded-[50%] " src={service.imageSrc} />
-                                        </div>
-                                        <div className="absolute right-20 bottom-[150px]">
-                                            <button type="button" className="border py-2 px-3 text-white border-gray-100 uppercase">{service.name}</button>
-                                        </div>
-
-                                    </div>
-                                 )
-                             }
-                             <button type="button" className="absolute p-3 left-0 top-[50%] flex items-center
-                                   justify-center rounded-[50%]  bg-cyan-800 text-white font-extrabold text-2xl
-                                      active:bg-cyan-900">
-                                        {"<"} 
-                             </button>
-
-                             <button type="button" className="absolute p-3 right-0 top-[50%] flex items-center
-                             justify-center rounded-[50%]  bg-cyan-800 text-white font-bold font-extrabold text-2xl
-                                active:bg-cyan-900">
-                                  {">"} 
-                       </button>
-
-                             
-                        </div>
-                       
-                    </div>
-                </div>
-                   
-​
-             </div>
+       
+<div class="py-16 dark:bg-blue-900">  
+<div class="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
+    <div class="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-3">
+        <div class="bg-white rounded-[30%] shadow-xl px-8 py-12 sm:px-12 lg:px-8 hover:shadow-2xl hover:shadow-orange-400 hover:cursor-pointer">
+            <div class="mb-12 space-y-4">
+                <h3 class="text-2xl font-semibold text-purple-900">Graphic Design</h3>
+                <p class="mb-6">Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.</p>
+                <a href="#" class="block font-medium text-purple-600">Know more</a>
+            </div>
+            <img src="https://tailus.io/sources/blocks/end-image/preview/images/graphic.svg" class="w-2/3 ml-auto -mb-12" alt="illustration" loading="lazy" width="900" height="600"/>
         </div>
+        <div class="bg-white rounded-[30%] shadow-xl px-8 py-12 sm:px-12 lg:px-8 hover:shadow-2xl hover:cursor-pointer">
+            <div class="mb-12 space-y-4">
+                <h3 class="text-2xl font-semibold text-purple-900">UI Design</h3>
+                <p class="mb-6">Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.</p>
+                <a href="#" class="block font-medium text-purple-600">Know more</a>
+            </div>
+            <img src="https://tailus.io/sources/blocks/end-image/preview/images/ui-design.svg" class="w-2/3 ml-auto" alt="illustration" loading="lazy" width="900" height="600"/>
+        </div>
+        <div class="bg-white rounded-[30%] shadow-xl px-8 py-12 sm:px-12 lg:px-8 hover:shadow-2xl hover:cursor-pointer">
+            <div class="mb-12 space-y-4">
+                <h3 class="text-2xl font-semibold text-purple-900">UX Design</h3>
+                <p class="mb-6">Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.</p>
+                <a href="#" class="block font-medium text-purple-600">Know more</a>
+            </div>
+            <img src="https://tailus.io/sources/blocks/end-image/preview/images/ux-design.svg" class="w-2/3 ml-auto " alt="illustration" loading="lazy" width="900" height="600"/>
+        </div>
+    </div>
+</div>
+</div>
     )
 }
 export  default Services;

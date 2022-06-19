@@ -4,7 +4,7 @@
 			b = document.body,
 			st = 'scrollTop',
 			sh = 'scrollHeight',
-			progress = document.querySelector('#progress'),
+			progress = document.querySelector('#progress'), 
 			scroll;
 		var scrollpos = window.scrollY;
 		var header = document.getElementById("header");

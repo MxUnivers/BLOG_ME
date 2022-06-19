@@ -54,6 +54,13 @@ const articles = [
 
 
 function ListArticles(){
+    if(articles== null){
+        return(
+            <div className="container-fluid ">
+                <div>Auccun resultat afficher ? </div>
+            </div>
+        )
+    }
     return(
         <div className="flex flex-wrap justify-between pt-12 -mx-6 ">
             

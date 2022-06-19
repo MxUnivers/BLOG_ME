@@ -6,6 +6,7 @@ const colors = ["#0088FE", "#00C49F", "#FFBB28","#0088FE", "#00C49F", ];
 const delay = 5000;
 
 const ImageSlider = () => {
+  
   const [slides, setSlides] = useState([{
       id: 1,
       title: "Jeux",
@@ -96,8 +97,8 @@ const ImageSlider = () => {
                 <div className="flex items-center justify-center mx-auto text-center w-[800px] truncate text-3xl text-white mt-5">
                   {slide.description}
                 </div>
-                <div className="flex items-center justify-center mx-auto text-center  text-2xl mt-5">
-                     <a href="" className="bg-yellow-500 text-black py-2 px-3 rounded hover:underline hover:bg-yellow-600  hover:text-gray-100  ">Voir Sujet</a>
+                <div className="flex items-center justify-center mx-auto text-center  text-xl mt-5">
+                     <a href="" className="bg-orange-500 text-black py-2 px-3 rounded hover:underline hover:bg-orange-600  hover:text-gray-100  ">Voir plus ...</a>
                 </div>
                 <div className="flex item-center justify-center sm:mt-8 sm:flex sm:justify-center lg:justify-center">
                   <div className="block rounded-full text-white bg-green-600 hover:bg-green-700">

@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs';
 import Category from './pages/Category';
 import Article from "./pages/Article";
 import ListArticles from "./pages/ListArticles";
+import Error404 from './pages/Error404';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
                <Route path="/category" element={<Category/>}  /> 
                <Route path="/article" element={<Article/>}  /> 
                <Route path="/more-articles" element={<ListArticles/>} />       
-               <Route path='="*' element={<div>Page not found</div>} />   
+               <Route path="/*" element={<Error404/>} />   
                  
            </Routes>
        </BrowserRouter>        

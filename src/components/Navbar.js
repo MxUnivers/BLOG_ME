@@ -29,7 +29,7 @@ const  categories = [
 
 
   return (
-      <nav className="bg-cyan-700">
+      <nav className="bg-blue-700 dark:bg-blue-900">
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
               <div className="relative flex items-center justify-between h-16">
                   
@@ -39,14 +39,15 @@ const  categories = [
                     </a>
                     <div className="hidden relative sm:block sm:ml-6">
                         <div className="flex space-x-4">
-                             <a href="#" className="flex justify-center items-center bg-gray-900 text-white px-3 py-5  rounded-md text-sm font-medium uppercase" aria-current="page">Accueil</a>
+                             <a href="/" className="flex justify-center items-center bg-gray-900 text-white px-3 py-5  rounded-md text-sm font-medium uppercase" aria-current="page">Accueil</a>
                              <a href={"/about"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">a propos de nous</a>
-                             <a href={"/contact"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">nouveautés</a>
-                             <a href={"#"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">contact</a>
-                             <a href={"/contact"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">services</a>
+                             <a href={"/contact"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">contact</a>
+                             <a href={"#"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">services</a>
+                             <a href={"/more-articles"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">services</a>
                              <a href={"/category"} onMouseEnter={ShowCart} onClick={ShowCart} className=" flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">categories <span></span></a>
                         </div>
-                        {
+                        
+                        { /* List categories articles */
                             cart ==  true ?
                                <div className=" grid grid-cols-4 gap-1 h-50 justify-evenly origin-top-right flex float absolute right-0 mt-2 w-full z-10 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                                    {    
@@ -54,7 +55,6 @@ const  categories = [
                                           <a href={cartegorie.href} id={cartegorie.id} className="rounded  grid-2 flex col-6 px-4 py-2 hover:bg-orange-300 border p-3  text-sm text-gray-700" role="menuitem" tabindex="-1" >
                                              {cartegorie.titre}
                                           </a>
-
                                        )
                                    }
                                 </div>
