@@ -6,12 +6,12 @@ import  {IoLogoWhatsapp} from  "react-icons/io";
 
 
 
-function Social(){
+function Social(props){
     return(
         <div className="fixed top-20 bg-white right-3 z-8 w-100 h-100 shadow-2xl rounded-2xl ">
             <div className="flex-col px-3 space-y-2">
                 
-                    <button type="button" className="my-1 rounded-2xl bg-gray-500 py-1 px-3 text-white hover:bg-gray-700">+ Rejoindre</button>
+                    <button type="button" onClick={props.ShowSbscribe} className="my-1 rounded-2xl bg-gray-500 py-1 px-3 text-white hover:bg-gray-700">+ Rejoindre</button>
                
                 <div className="flex-col   space-y-3">
 

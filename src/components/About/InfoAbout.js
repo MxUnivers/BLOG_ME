@@ -3,7 +3,7 @@ import React from  "react" ;
 
 function InfoAbout(){
     return(
-         <section className="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden">
+         <section className="relative z-4  top-0 right-0 pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden">
              <div className="container mx-5 border-t py-4 border-b ">
                  <div className="flex flex-wrap justify-between items-center -mx-4">
                      <div className="w-full lg:w-6/12 px-4">
@@ -541,7 +541,7 @@ function InfoAbout(){
             </div>
          </div>
       </div>
-      <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
+      <div className="bg-white w-full lg:w-1/2 xl:w-5/12 px-4">
          <div className="mt-10 lg:mt-0">
             <span className="font-semibold text-lg text-primary mb-2 block">
             Why Choose Us

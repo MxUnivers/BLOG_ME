@@ -15,7 +15,7 @@ const Articles = ({Legend}) => {
           title: "religion",
           href:"#",
           description: "La bible , un document contenant de grands mistères",
-          coverPicture:
+          imageSrc:
             "https://cdn.pixabay.com/photo/2017/03/02/05/14/bible-2110439__340.jpg",
         },
         {
@@ -23,16 +23,9 @@ const Articles = ({Legend}) => {
           title: "santé",
           href:"#",
           description: "rien de mieux que d'être en bonne santé",
-          coverPicture:
+          imageSrc:
             "https://cdn.pixabay.com/photo/2014/02/27/16/09/microscope-275984__340.jpg",
-        },{
-          id: 4,
-          title: "technologie",
-          href:"#",
-          description: "que pourrait ton dire de la technologie en ellement elle pourrait offrir un poortunité considérables",
-          coverPicture:
-            "https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275__340.jpg",
-        },
+        }
           
       ]);
   return (
@@ -53,7 +46,7 @@ const Articles = ({Legend}) => {
         
     {
       articles.map((article)=>
-          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <article class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
               <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                  <a href="#" href="#" class="flex flex-wrap no-underline hover:no-underline">
                    <img src={article.imageSrc} class="h-64 w-full rounded-t pb-6"/>
@@ -70,7 +63,7 @@ const Articles = ({Legend}) => {
                       <p class="text-gray-600 text-xs md:text-sm">{article.date}</p>
                   </div>
               </div>
-          </div>
+          </article>
       )
   }
     </div>

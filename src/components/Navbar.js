@@ -29,7 +29,7 @@ const  categories = [
 
 
   return (
-      <nav className="bg-blue-700 dark:bg-blue-900">
+      <nav className="relative top-0 right-0 z-4 bg-blue-700 dark:bg-blue-900">
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
               <div className="relative flex items-center justify-between h-16">
                   

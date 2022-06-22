@@ -5,7 +5,7 @@ const OtherArticles = () => {
     
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-12">
 <article>
-    <h2 class="text-2xl font-extrabold text-gray-900">BLOG</h2>
+    <h2 class="text-2xl font-extrabold text-gray-900">Les article qui pourai vous intérrés</h2>
     <section class="mt-6 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
         <article class="relative w-full h-64 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out"
             style={{backgroundImage: "url('https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80')"}}>
