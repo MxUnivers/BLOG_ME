@@ -42,9 +42,10 @@ const  categories = [
                              <a href="/" className="flex justify-center items-center bg-gray-900 text-white px-3 py-5  rounded-md text-sm font-medium uppercase" aria-current="page">Accueil</a>
                              <a href={"/about"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">a propos de nous</a>
                              <a href={"/contact"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">contact</a>
-                             <a href={"#"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">services</a>
-                             <a href={"/more-articles"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">services</a>
+                             <a href={"/actu"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Videos</a>
+                             <a href={"/more-articles"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">plus articles</a>
                              <a href={"/category"} onMouseEnter={ShowCart} onClick={ShowCart} className=" flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">categories <span></span></a>
+                             <a href={"/list-cart"} onMouseEnter={ShowCart} onClick={ShowCart} className=" flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">listes-catégories <span></span></a>
                         </div>
                         
                         { /* List categories articles */

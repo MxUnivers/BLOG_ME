@@ -2,6 +2,9 @@
 import  React, { useEffect ,  useState } from  "react";
 import  {FaFileAudio} from  "react-icons/fa";
 import {FaVideo} from  "react-icons/fa";
+import {FaFacebookF } from  "react-icons/fa" ;
+import  {BsYoutube ,  BsWhatsapp} from  "react-icons/bs";
+
 /* Composant  */
 import Navbar from "../components/Navbar";
 import  Footer from  "../components/Footer";
@@ -70,6 +73,13 @@ function Article(){
 						       <button onClick={()=> window.history.back()}  class="text-base rounded-2xl py-1 px-3 dark:bg-blue-800  text-white md:text-sm  font-bold">
 						          retour 
 								</button>
+							</div>
+							{/* media header */}
+							<div className="flex flex-start my-3 mx-1 space-x-3 ">
+								<button type="button" className="bg-blue-500 text-white px-4 py-1 "><FaFacebookF className="text-white text-2xl w-30 "/></button>
+								<button type="button" className="bg-red-500 text-white px-4 py-1 "><BsYoutube className="text-white text-2xl w-30 "/></button>
+								<button type="button" className="bg-green-500 text-white px-4 py-1 "><BsWhatsapp className="text-white text-2xl w-30 "/></button>
+								<button type="button" className="bg-gray-500 text-white px-4 py-1 ">+ rejoindre</button>
 							</div>
 						    <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Welcome to Minimal Blog</h1>
 							<p class="text-sm md:text-base font-normal text-gray-600">Published 19 February 2019</p>
