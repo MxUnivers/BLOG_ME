@@ -1,6 +1,7 @@
 
 
 import React from "react";
+import {Link} from "react-router-dom";
 import Navbar from  "../components/Navbar";
 import Footer from  "../components/Footer";
 import  Social from "../components/Social";
@@ -22,7 +23,7 @@ function CategoryArticle() {
            <Navbar/>
            {/* SOCIAL ************* */}
            <Social/>
-           <div className="bg-gray-100 font-sans leading-normal tracking-normal">
+           <div className="bg-gray-900 font-sans leading-normal tracking-normal">
 
                {/* Background image Category */}
            <div className="w-full m-0 p-0 bg-cover bg-bottom" style={{backgroundImage:"url('https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')", height: "60vh", maxHeight:"460px"}}>
@@ -40,7 +41,7 @@ function CategoryArticle() {
                    {/* NavItem ( barre de navigation pour les item) */}
                    <NavItem/>
 
-                   <div className="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+                   <div className=" w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
        
                        {/* HeaderArticles les articles en vedettes */}
                        <HeaderArticle/>
@@ -57,7 +58,7 @@ function CategoryArticle() {
                        <img className="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author"/>
                        <div className="flex-1">
                            <p className="text-base font-bold text-base md:text-xl leading-none">Ghostwind CSS</p>
-                           <p className="text-gray-600 text-xs md:text-base">Tailwind CSS version of Ghost's Casper theme by <a href="#" className="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+                           <p className="text-gray-600 text-xs md:text-base">Tailwind CSS version of Ghost's Casper theme by <Link  className="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" to="https://www.tailwindtoolbox.com">TailwindToolbox.com</Link></p>
                        </div>
                        <div className="justify-end">
                            <button className="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read More</button>

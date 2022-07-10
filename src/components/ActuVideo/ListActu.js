@@ -3,23 +3,17 @@ import  {AiFillPlayCircle} from "react-icons/ai";
 
 const videos = [
     {
-        id : 1 , category :"Vie" ,  imageSrc : "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp", 
+        id : 1 , category :"Vie" ,  imageSrc : "https://picsum.photos/seed/57/40/40", 
     },
     {
-      id : 1 , category :"Santé" ,  imageSrc : "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp", 
+      id : 1 , category :"Santé" ,  imageSrc : "https://picsum.photos/seed/59/300/200", 
     },
     {
-      id : 2 , category :"livres" ,  imageSrc : "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp",
+      id : 2 , category :"livres" ,  imageSrc : "https://picsum.photos/seed/60/300/200",
     },
     {
-      id : 2 , category :"religion" ,  imageSrc : "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp",
+      id : 2 , category :"religion" ,  imageSrc : "https://picsum.photos/seed/22/300/200",
     },
-    {
-      id : 2 , category :"informations" ,  imageSrc : "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp",
-    },
-    {
-      id : 2 , category :"pensées" ,  imageSrc : "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
-    }
 ]
 
 
@@ -34,38 +28,51 @@ const ListActu = () => {
  
 
   return (
-    <section className="overflow-hidden text-gray-700 my-2 mb-5 pb-5">
-  <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-   
-    <div className="flex flex-wrap -m-1 md:-m-2">
-      
-      {
-       
-          videos.map((video)=>
-                
-               <div className="flex flex-wrap w-1/3 hover:cursor-pointer" key={video.id}>
-                  <div className="relative z-1 w-full p-1 md:p-2" onClick={ShowVideo}>
-                     <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
-                        src={video.imageSrc}/>
-                      <button type="button"  className="absolute top-[30%] right-[30%] z-2 text-gray-100 p-2 "><AiFillPlayCircle className="h-16 w-20"/></button>
+
+    <div className="m-10 pt-3 flex bg-gray-900 items-center justify-center">
+      <div className="grid grid-cols-12 gap-6 gap-y-4 max-w-6xl">
+
+
+        {
+          videos.map((video) =>
+            <div className="col-span-12 sm:col-span-6 md:col-span-3">
+              <card className="w-full flex flex-col">
+                <div className="relative">
+
+                  {/*<!-- Image Video --> */}
+                  <a href="#">
+                    <img src="https://picsum.photos/seed/90/300/200" className="w-96 h-auto" />
+                  </a>
+
+                  <p className="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
+                </div>
+
+                <div className="flex flex-row mt-2 gap-2">
+
+                  {/*<!-- Profile Picture --> */}
+                  <a href="#">
+                    <img src="https://picsum.photos/seed/57/40/40" className="rounded-full max-h-10 max-w-10" />
+                  </a>
+
+                  {/*<!-- Description --> */}
+                  <div clas="flex flex-col">
+                    <a href="#">
+                      <p className="text-gray-100 text-sm font-semibold">Learn CSS Box Model in 8 Minutes</p>
+                    </a>
+                    <a className="text-gray-400 text-xs mt-2 hover:text-gray-100" href="#"> Web Dev Simplified </a>
+                    <p className="text-gray-400 text-xs mt-1">241K views . 3 years ago</p>
                   </div>
-  
-                  <div style={{visibility : Video ==true ? "visible" : "hidden"}} className="fixed h-[100%] top-0 right-0 z-10 p-1 bg-gradient-to-t from-black to-transparent">
-                      <button type="button" onClick={HideVideo} className="p-2 mx-2 rounded-[50%] text-gray-500 bg-gray-100 text-2xl hover:cursor-pointer " >x</button>
-                      <video class="w-[85%] shadow-lg py-1 px-10  " autoplay loop controls >
-                         <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
-                      </video>
-                  </div>
-               </div>
-  
-               
+
+                </div>
+              </card>
+            </div>
           )
-       
-      }
-      
+        }
+
+
+
+      </div>
     </div>
-  </div>
-</section>
   )
 }
 

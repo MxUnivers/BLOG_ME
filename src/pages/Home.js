@@ -38,7 +38,6 @@ const Home = () => {
 
       {/*  L'indicateur de dommainer que vous voulez visté sur le blog  */}
       <NavItem/>
-      <ImageIntro image ={image1}/>
       {/*  les differrents articles mise en ligne sur la page d'accueil tel ques les nouveaux articleet ceux qui vount être publié */}
       <Articles Legend = {"Les plus populaires"}/>
       <ImageIntro image ={image2}/>

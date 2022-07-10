@@ -3,33 +3,51 @@ import  {AiFillPlayCircle} from "react-icons/ai";
 
 const ActuIntro = () => {
   return (
-    <div className="my-2 mt-4 mx-3   flex items-center justfiy-center">
-        <div className="container flex-col pt-2 border-t text-white  ">
-            <div className="flex items-center justify-center ">
-                <h3 className="text-2xl font-bold leading-9 text-white uppercase">Articles recent</h3>
-            </div>
-            {/* Videos ou article en tête */}
-            <div class="flex justify-center">
-                <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-                    <div  className="relative w-full">
-                        <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="" />
-                        <button type="button" className="absolute top-[30%] right-[50%] text-gray-300 z-1 p-2 " ><AiFillPlayCircle  className="h-20 w-20"/></button>
-                    </div>
-                    
-                    <div class="p-6 flex flex-col justify-start">
-                        <h5 class="text-gray-900 text-xl font-medium mb-2">Card title</h5>
-                        <p class="text-gray-700 text-base mb-4">
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        </p>
-                        <p class="text-gray-600 text-xs">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-            </div>
-            
-            
+      <div className="my-2 mt-4 mx-3   flex-col  justfiy-center">
 
-        </div>
-    </div>
+          <div className="text-white flex-col justify-center  ">
+              <h3 classname="text-xl uppercase">Nos actulités</h3>
+              <p className="text-gray-200 ">Nos publications en continus sur notre blog</p>
+          </div>
+
+
+
+          <div className="flex justify-center">
+              {/* Videos ou article en tête */}
+              <div className="col-span-12 sm:col-span-6 md:col-span-3">
+                  <card className="w-full flex flex-col">
+                      <div className="relative">
+
+                          {/*<!-- Image Video --> */}
+                          <a href="#">
+                              <img src="https://picsum.photos/seed/90/300/200" className="w-96 h-auto" />
+                          </a>
+                          <p className="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
+                      </div>
+                      <div className="flex flex-row mt-2 gap-2">
+                          {/*<!-- Profile Picture --> */}
+                          <a href="#">
+                              <img src="https://picsum.photos/seed/57/40/40" className="rounded-full max-h-10 max-w-10" />
+                          </a>
+                          {/*<!-- Description --> */}
+                          <div clas="flex flex-col">
+                              <a href="#">
+                                  <p className="text-gray-100 text-sm font-semibold">Learn CSS Box Model in 8 Minutes</p>
+                              </a>
+                              <a className="text-gray-400 text-xs mt-2 hover:text-gray-100" href="#"> Web Dev Simplified </a>
+                              <p className="text-gray-400 text-xs mt-1">241K views . 3 years ago</p>
+                          </div>
+
+                      </div>
+                  </card>
+              </div>
+
+          </div>
+
+
+
+
+      </div>
   )
 }
 

@@ -1,18 +1,19 @@
 
 
 import React ,{useState} from 'react';
+import {Link} from  "react-router-dom"
 
 
 const  categories = [
-    {id : 1 ,  titre:"Informatique" ,  href:"#"},
-    {id : 2 ,  titre:"santé" ,  href:"#"},
-    {id : 3 ,  titre:"Animation" ,  href:"#"},
-    {id : 4 ,  titre:"travail" ,  href:"#"},
-    {id : 1 ,  titre:"voyage" ,  href:"#"},
-    {id : 1 ,  titre:"pensées" ,  href:"#"},
-    {id : 1 ,  titre:"develppement personel" ,  href:"#"},
-    {id : 1 ,  titre:"nature" ,  href:"#"},
-    {id : 1 ,  titre:"Cinéma" ,  href:"#"}
+    {id : 1 ,  titre:"Informatique" ,  to:"#"},
+    {id : 2 ,  titre:"santé" ,  to:"#"},
+    {id : 3 ,  titre:"Animation" ,  to:"#"},
+    {id : 4 ,  titre:"travail" ,  to:"#"},
+    {id : 1 ,  titre:"voyage" ,  to:"#"},
+    {id : 1 ,  titre:"pensées" ,  to:"#"},
+    {id : 1 ,  titre:"develppement personel" ,  to:"#"},
+    {id : 1 ,  titre:"nature" ,  to:"#"},
+    {id : 1 ,  titre:"Cinéma" ,  to:"#"}
 ]
 
 
@@ -34,18 +35,19 @@ const  categories = [
               <div className="relative flex items-center justify-between h-16">
                   
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                    <a href={"/"} className="flex-shrink-0 flex items-center w-10 text-white border-b py-1">
+                    <Link to={"/"} className="flex-shrink-0 flex items-center w-10 text-white border-b py-1">
                         <img className=" lg:block h-8 w-auto" src="logo_Aymar.png" alt="Workflow"/>
-                    </a>
+                    </Link>
                     <div className="hidden relative sm:block sm:ml-6">
                         <div className="flex space-x-4">
-                             <a href="/" className="flex justify-center items-center bg-gray-900 text-white px-3 py-5  rounded-md text-sm font-medium uppercase" aria-current="page">Accueil</a>
-                             <a href={"/about"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">a propos de nous</a>
-                             <a href={"/contact"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">contact</a>
-                             <a href={"/actu"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Videos</a>
-                             <a href={"/more-articles"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">plus articles</a>
-                             <a href={"/category"} onMouseEnter={ShowCart} onClick={ShowCart} className=" flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">categories <span></span></a>
-                             <a href={"/list-cart"} onMouseEnter={ShowCart} onClick={ShowCart} className=" flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">listes-catégories <span></span></a>
+                             <Link to="/" className="flex justify-center items-center bg-gray-900 text-white px-3 py-5  rounded-md text-sm font-medium uppercase" aria-current="page">Accueil</Link>
+                             <Link to={"/about"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">a propos de nous</Link>
+                             <Link to={"/contact"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">contact</Link>
+                             <Link to={"/actu"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Videos</Link>
+                             <Link to={"/more-articles"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">plus articles</Link>
+                             <Link to={"/services"} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">services</Link>
+                             <Link to={"/category"} onMouseEnter={ShowCart} onClick={ShowCart} className=" flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">categories <span></span></Link>
+                             <Link to={"/list-cart"} onMouseEnter={ShowCart} onClick={ShowCart} className=" flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">listes-catégories <span></span></Link>
                         </div>
                         
                         { /* List categories articles */
@@ -53,9 +55,9 @@ const  categories = [
                                <div className=" grid grid-cols-4 gap-1 h-50 justify-evenly origin-top-right flex float absolute right-0 mt-2 w-full z-10 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                                    {    
                                        categories.map((cartegorie)=>
-                                          <a href={cartegorie.href} id={cartegorie.id} className="rounded  grid-2 flex col-6 px-4 py-2 hover:bg-orange-300 border p-3  text-sm text-gray-700" role="menuitem" tabindex="-1" >
+                                          <Link to={cartegorie.to} id={cartegorie.id} className="rounded  grid-2 flex col-6 px-4 py-2 hover:bg-orange-300 border p-3  text-sm text-gray-700" role="menuitem" tabindex="-1" >
                                              {cartegorie.titre}
-                                          </a>
+                                          </Link>
                                        )
                                    }
                                 </div>
@@ -86,10 +88,10 @@ const  categories = [
 
         <div className="sm:hidden" id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1 flex">
-                <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+                <Link to="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</Link>
+                <Link to="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</Link>
+                <Link to="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</Link>
+                <Link to="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</Link>
             </div>
             <div className="">
             </div>
